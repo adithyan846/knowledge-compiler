@@ -1,0 +1,23 @@
+id: reference
+
+version: 1
+
+name: Reference Extension
+
+extends: core
+
+required:
+
+  - references
+
+optional:
+
+  - notes
+
+field_definitions:
+
+  references:
+    type: list
+
+  notes:
+    type: list[string]

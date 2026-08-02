@@ -1,0 +1,63 @@
+id: troubleshooting
+
+version: 1
+
+name: Troubleshooting Extension
+
+extends: core
+
+required:
+
+  - diagnostics
+
+optional:
+
+  - symptoms
+  - verification
+
+field_definitions:
+
+  diagnostics:
+    type: list
+
+  symptoms:
+    type: list[string]
+
+  verification:
+    type: list[string]
+
+diagnostic_fields:
+
+  cause:
+    type: string
+
+  priority:
+    type: integer
+
+  likelihood:
+    type: enum
+    values:
+      - very_high
+      - high
+      - medium
+      - low
+      - very_low
+
+  check_cost:
+    type: enum
+    values:
+      - very_low
+      - low
+      - medium
+      - high
+
+  danger:
+    type: enum
+    values:
+      - none
+      - low
+      - medium
+      - high
+
+  fix:
+    type: list[string]

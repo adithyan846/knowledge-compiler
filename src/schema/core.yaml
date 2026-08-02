@@ -1,0 +1,56 @@
+id: core
+
+name: Siesta Core Schema
+
+version: 1
+
+description: >
+  Fields required for every knowledge file.
+
+required:
+
+  - schema_version
+  - id
+  - title
+  - tags
+  - types
+  - summary
+
+optional:
+
+  - related
+  - metadata
+
+field_definitions:
+
+  schema_version:
+    type: integer
+    description: Knowledge schema version.
+
+  id:
+    type: string
+    description: Globally unique knowledge identifier.
+
+  title:
+    type: string
+    description: Human-readable title.
+
+  tags:
+    type: list[string]
+    description: Search keywords.
+
+  types:
+    type: list[string]
+    description: Knowledge classifications.
+
+  summary:
+    type: string
+    description: Short description.
+
+  related:
+    type: list[string]
+    description: Related knowledge IDs.
+
+  metadata:
+    type: object
+    description: Optional metadata.

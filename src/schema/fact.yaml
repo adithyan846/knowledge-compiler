@@ -1,0 +1,35 @@
+id: fact
+
+version: 1
+
+name: Fact Extension
+
+extends: core
+
+required:
+
+  - fact
+
+optional:
+
+  - explanation
+  - consequences
+  - evidence
+  - engineering_notes
+
+field_definitions:
+
+  fact:
+    type: string
+
+  explanation:
+    type: string
+
+  consequences:
+    type: list[string]
+
+  evidence:
+    type: object
+
+  engineering_notes:
+    type: list[string]

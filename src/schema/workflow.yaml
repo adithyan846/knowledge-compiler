@@ -1,0 +1,39 @@
+id: workflow
+
+version: 1
+
+name: Workflow Extension
+
+extends: core
+
+required:
+
+  - workflow
+
+optional:
+
+  - safety_rules
+  - prerequisites
+  - verification
+  - troubleshooting
+  - engineering_notes
+
+field_definitions:
+
+  safety_rules:
+    type: list[string]
+
+  prerequisites:
+    type: list[string]
+
+  workflow:
+    type: list
+
+  verification:
+    type: list[string]
+
+  troubleshooting:
+    type: list
+
+  engineering_notes:
+    type: list[string]
